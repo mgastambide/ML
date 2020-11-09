@@ -1,0 +1,13 @@
+@import 'public/scss/colors';
+@import 'public/scss/Navbar';
+@import 'public/scss/General';
+
+@mixin nuevo-borde ( $size ) {
+    @if ( $size > 8 ) {
+        border: 2px;
+        border-radius: 5px;
+    } @else {
+        border: 1px;
+        border-radius: 3px;
+    }
+}

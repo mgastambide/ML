@@ -1,0 +1,167 @@
+@import 'public/scss/colors';
+
+body {
+    background-color: $light_grey;
+    color: $grey;
+}
+
+.Breadcrumbs, .container{
+    padding: 16px 0;
+    height: auto;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+.p-0{padding:0 !important}
+
+.container{
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    background-color: $white;
+    .products{
+        width: 100%;
+        .item-product{
+            padding: 16px 0 16px 16px;
+            display:flex;
+            flex-wrap: wrap;
+            a{
+                display:flex;
+                width: 100%;
+                img{
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 4px;
+                    margin-right: 16px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .details{
+                    .price-container{
+                        font-size: 25px;
+                        color: $secondary_color;
+                        font-weight: 400;
+                    }
+                    h2{
+                        color: $secondary_color;
+                        font-size: 23px;
+                        font-weight: 300;
+                        line-height: 1.3;
+                        font-weight: 400;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        word-break: break-word;
+                    }
+                }
+            }
+
+        }        
+    }
+}
+
+/****Single Product*****/
+.container-product{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $white;
+    .product{
+        display: flex;
+        justify-content: center;    
+        img{
+            width:680px;
+            height:auto;
+        }
+        .details{
+            padding: 0 15px;
+            .subtitle{
+                padding: 32px 0 16px;
+                font-size: 14px;
+                .ui-subtitle{
+                    color: rgba(0,0,0,.45);
+                    font-size: 14px;
+                    font-weight: 400;
+                    vertical-align: 3px;
+                    white-space: pre-wrap;
+                }
+            }
+            h1{
+                margin:0;
+                font-size: 24px;
+                color: $secondary_color
+            }
+            .price-container{
+                font-size: 46px;
+                font-weight: 500;
+                color: $secondary_color;
+                padding: 32px 0;
+            }
+            .button-primary{
+                border-color: transparent;
+                background-color: $blue;
+                color: $white;
+                cursor: pointer;
+                -webkit-transition: box-shadow .25s ease-out,background-color .2s ease-out;
+                transition: box-shadow .25s ease-out,background-color .2s ease-out;
+                box-shadow: 0 0 0 0 $white;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 48px;
+                padding: 0 24px;
+                height: 48px;
+                text-align: center;
+                border-radius: 6px;
+                -webkit-transition: .18s ease-out;
+                transition: .18s ease-out;
+                display: inline-block;
+                width: 100%;
+                -webkit-font-smoothing: antialiased;
+                max-width: 330px;
+                .button-content{
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+    .product-description{
+        padding: 0 32px;
+        max-width: 718px;
+        h2{
+            font-size: 28px;
+            padding: 16px 0 32px;
+            color: $secondary_color;
+            margin:0;
+        }
+        p{
+            margin:0;
+            padding-bottom: 32px;
+        }
+    }
+    @media screen and (max-width: 640px){
+        .product{
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+/*****resposive*****/
+@media screen and (max-width: 1200px){
+    header{
+           padding: 0 15px
+    }
+}
